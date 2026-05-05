@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% set pageTitle = site.name %}
+  {% if title %}
+    {% set pageTitle = title ~ " · " ~ site.name %}
+  {% endif %}
+  {% set pageDescription = description or site.description %}
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="{{ site.tokens.colorTheme }}">
+
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ pageDescription }}">
+
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ pageDescription }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap">
+
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any">
+
+  {% if noindex %}
+    <meta name="robots" content="noindex,nofollow">
+  {% endif %}
+</head>
+
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/" aria-label="CoCitizen home">
+        <span class="brand__co" aria-hidden="true">Co</span><span class="brand__citizen" aria-hidden="true">Citizen</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        {% for item in site.nav %}
+          {% if item.external %}
+            <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.label }} ↗</a>
+          {% else %}
+            <a href="{{ item.url }}"
+              {% if item.match and page.url.startsWith(item.match) %}aria-current="page"{% endif %}>
+              {{ item.label }}
+            </a>
+          {% endif %}
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="container">
+      {{ content | safe }}
+    </div>
+  </main>
+
+  <footer class="site-footer surface-dark">
+    <div class="container">
+      <p>
+        &copy; {{ page.date | year }} {{ site.name }}
+        &nbsp;&middot;&nbsp;
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </p>
+      <p class="small">
+        Volunteer-run &middot; Open source &middot; <a href="/privacy/">Privacy</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

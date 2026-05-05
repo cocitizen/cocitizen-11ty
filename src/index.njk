@@ -1,0 +1,120 @@
+---
+layout: layouts/base.njk
+description: "CoCitizen is a volunteer home for open-source civic-tech tools used by democratic organizations worldwide. We steward, document, and deploy tools for election monitoring, cybersecurity training, and civil society coordination."
+---
+
+{# Intro — light, typographic, no dark surface #}
+<section class="home-intro" aria-labelledby="wordmark">
+  <h1 class="wordmark" id="wordmark" aria-label="CoCitizen">
+    <span class="wordmark__co" aria-hidden="true">Co</span><span class="wordmark__citizen" aria-hidden="true">Citizen</span>
+  </h1>
+  <div class="intro-body">
+    <p class="lead highlight">
+      A volunteer home for open-source civic-tech tools that have been used in production
+      across dozens of countries — by election monitors, civil society groups, and
+      organizations working in difficult environments.
+    </p>
+    <p class="lead">
+      We didn't build these tools. We maintain them, improve their deployability,
+      and keep them accessible to the organizations that need them.
+    </p>
+    <div class="intro-cta">
+      <a href="{{ site.github }}" class="btn" target="_blank" rel="noopener">View our work on GitHub</a>
+    </div>
+  </div>
+</section>
+
+{# Stats band #}
+<div class="stats-band full-bleed surface-dark" aria-hidden="true">
+  <div class="container">
+    <div class="stats">
+      <div class="stat">
+        <span class="stat__value">2</span>
+        <span class="stat__label">open-source tools</span>
+      </div>
+      <div class="stat">
+        <span class="stat__value">40+</span>
+        <span class="stat__label">countries in active use</span>
+      </div>
+      <div class="stat">
+        <span class="stat__value">100%</span>
+        <span class="stat__label">volunteer-run</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# Tools #}
+<section id="tools" class="tools-section" aria-label="Our tools">
+  <div class="card-grid">
+
+    <a href="/cybersim/" class="card">
+      <div class="card__meta">Cybersecurity training</div>
+      <h3>CyberSim</h3>
+      <p>
+        An interactive tabletop exercise for teams facing real-world digital threats.
+        Deployed for parliaments, political parties, election monitors, and civil society
+        organizations in active use.
+      </p>
+      <span class="card__arrow">Learn more →</span>
+    </a>
+
+    <a href="/apollo/" class="card">
+      <div class="card__meta">Election observation</div>
+      <h3>Apollo</h3>
+      <p>
+        An election data management system for aggregating and analyzing reports from
+        observer teams ranging from dozens to tens of thousands of people.
+      </p>
+      <span class="card__arrow">Learn more →</span>
+    </a>
+
+  </div>
+</section>
+
+{# About #}
+<section id="about" class="home-section" aria-labelledby="about-heading">
+  <div class="prose">
+    <h2 id="about-heading">About CoCitizen</h2>
+
+    <h3>Who we are</h3>
+    <p>
+      We're a small group of experienced civic technologists — practitioners who've
+      worked alongside civil society and democracy organizations for years. We've deployed
+      both of these tools in production: in elections, in training programs, in organizations
+      working under real operational pressure.
+    </p>
+    <p>
+      CoCitizen isn't a company or a nonprofit. It's a volunteer home — a GitHub organization
+      and a website that give these tools a public address and make it easier for others to
+      find, assess, and use them.
+    </p>
+
+    <h3>How we work</h3>
+    <p>
+      Both tools are open source under the
+      <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License v3</a>.
+      Fork them, deploy them, adapt them for your context. Keep the attribution and license intact.
+    </p>
+    <p>
+      We welcome contributions — code, documentation, deployment notes, issue reports.
+      We respond as time allows. This is volunteer work; there is no support SLA.
+    </p>
+  </div>
+</section>
+
+{# Contact #}
+<section id="contact" class="home-section" aria-labelledby="contact-heading">
+  <div class="prose">
+    <h2 id="contact-heading">Contact</h2>
+    <p>
+      Reach us at <a href="mailto:{{ site.email }}">{{ site.email }}</a> or through our
+      <a href="{{ site.github }}" target="_blank" rel="noopener">GitHub organization</a>.
+      We're volunteers, so replies may not be immediate.
+    </p>
+    <p>
+      If you need reliable, hands-on support — deployment, customization, training —
+      individual contributors may be available for paid engagements.
+    </p>
+  </div>
+</section>

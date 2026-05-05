@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+isProject: true
+---
+<section class="page-head full-bleed surface-dark" aria-labelledby="project-title">
+  <div class="container">
+    <h1 id="project-title">{{ title }}</h1>
+    {% if kicker %}
+      <p class="kicker">{{ kicker }}</p>
+    {% endif %}
+  </div>
+</section>
+
+<article class="prose">
+  {{ content | safe }}
+</article>

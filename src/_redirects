@@ -1,0 +1,2 @@
+# Cloudflare Pages redirect rules
+# Format: /old-path  /new-path  301

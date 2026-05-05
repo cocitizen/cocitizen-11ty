@@ -1,0 +1,239 @@
+---
+layout: layouts/base.njk
+title: Styleguide
+description: Design system reference for CoCitizen.
+noindex: true
+---
+
+<div class="prose">
+  <h1>Styleguide</h1>
+  <p class="muted">Internal design system reference. Not indexed by search engines.</p>
+</div>
+
+<section class="home-section">
+  <div class="prose">
+    <h2>Colors</h2>
+  </div>
+  <div class="sg-swatches">
+    <div class="sg-swatch" style="background:#1E3A5F;color:rgba(255,255,255,.93)">
+      <strong>--color-theme</strong><br><small>#1E3A5F</small>
+    </div>
+    <div class="sg-swatch" style="background:#C47E3C;color:#fff">
+      <strong>--color-accent-warm</strong><br><small>#C47E3C</small>
+    </div>
+    <div class="sg-swatch" style="background:#F8F7F3;border:1px solid rgba(0,0,0,.12)">
+      <strong>--color-bg</strong><br><small>#F8F7F3</small>
+    </div>
+    <div class="sg-swatch" style="background:#fff;border:1px solid rgba(0,0,0,.12)">
+      <strong>--color-surface</strong><br><small>#FFFFFF</small>
+    </div>
+    <div class="sg-swatch" style="background:#F1F0EB;border:1px solid rgba(0,0,0,.12)">
+      <strong>--color-surface-muted</strong><br><small>#F1F0EB</small>
+    </div>
+    <div class="sg-swatch" style="background:#1A1A1A;color:rgba(255,255,255,.93)">
+      <strong>--color-text</strong><br><small>#1A1A1A</small>
+    </div>
+    <div class="sg-swatch" style="background:#56606D;color:#fff">
+      <strong>--color-muted</strong><br><small>#56606D</small>
+    </div>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="prose">
+    <h2>Typography</h2>
+    <p class="muted">Public Sans — USWDS typeface. Civic, clean, readable.</p>
+    <h1>Heading 1 — clamp(2rem, 4vw, 2.6rem) / 700</h1>
+    <h2>Heading 2 — clamp(1.4rem, 2.5vw, 1.8rem) / 600</h2>
+    <h3>Heading 3 — clamp(1.05rem, 1.8vw, 1.15rem) / 600</h3>
+    <p>Body text — 1rem / 1.6 line-height. The quick brown fox jumps over the lazy dog.</p>
+    <p class="muted">Muted text — secondary information, metadata, captions.</p>
+    <p><a href="#">A link in body text</a></p>
+    <p><small>Small text — 0.85rem, used in the footer and fine print.</small></p>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="prose">
+    <h2>Buttons</h2>
+    <p class="muted">Amber on light backgrounds; cobalt with white outline on dark surfaces. Same <code>.btn</code> class — context-aware via CSS.</p>
+  </div>
+  <div style="display:flex;gap:var(--space-6);flex-wrap:wrap;margin-bottom:var(--space-4)">
+    <div style="flex:1;min-width:240px;padding:var(--space-6);background:var(--color-bg);border-radius:var(--radius)">
+      <p class="small muted" style="margin-bottom:var(--space-4)">Light surface</p>
+      <a href="#" class="btn">View our work on GitHub</a>
+    </div>
+    <div class="surface-dark" style="flex:1;min-width:240px;padding:var(--space-6);border-radius:var(--radius)">
+      <p class="small" style="margin-bottom:var(--space-4);color:rgba(255,255,255,.65)">Dark surface</p>
+      <a href="#" class="btn">View our work on GitHub</a>
+    </div>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="prose">
+    <h2>Cards</h2>
+  </div>
+  <div class="card-grid" style="max-width:680px">
+    <a href="#" class="card">
+      <div class="card__meta">Category label</div>
+      <h3>Card title</h3>
+      <p>Card description — a sentence or two about what this card links to.</p>
+      <span class="card__arrow">Learn more →</span>
+    </a>
+    <a href="#" class="card">
+      <div class="card__meta">Category label</div>
+      <h3>Card title</h3>
+      <p>Card description — a sentence or two about what this card links to.</p>
+      <span class="card__arrow">Learn more →</span>
+    </a>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="prose">
+    <h2>Page head</h2>
+    <p>Used on project subpages.</p>
+  </div>
+</section>
+
+<section class="page-head full-bleed surface-dark">
+  <div class="container">
+    <h1>Project Name</h1>
+    <p class="kicker">One-line project description in muted on-dark text.</p>
+  </div>
+</section>
+
+{# Surface treatments comparison #}
+<section class="home-section">
+  <div class="prose">
+    <h2>Surface treatments — options</h2>
+    <p class="muted">Each option shown as a self-contained dark band. Mix and match the edges.</p>
+  </div>
+</section>
+
+{# Chosen system — live classes #}
+<div class="prose">
+  <h3>Chosen system — live CSS classes</h3>
+  <p class="muted">Left amber highlight on key statements. Cobalt hairline + 1px gap before dark bands.</p>
+</div>
+
+<div style="max-width:60ch;margin-bottom:var(--space-6)">
+  <p class="lead highlight">
+    Left amber border on a lead paragraph — the <code>.highlight</code> class. Used on the homepage intro statement.
+  </p>
+</div>
+
+<div class="surface-dark" style="padding:var(--space-8);margin-bottom:var(--space-8)">
+  <p style="margin:0;font-size:.85rem;color:rgba(255,255,255,.65)">Dark band with 2px cobalt hairline + 1px background gap above — <code>.surface-dark</code></p>
+</div>
+
+{# Show hairline detail close-up #}
+<div class="prose">
+  <h3>Hairline detail</h3>
+  <p class="muted">The gap is the warm background (#F8F7F3) showing through between the hairline and the block. Two box-shadows, no extra markup.</p>
+</div>
+<div style="background:var(--color-bg);padding:var(--space-4);border:1px solid var(--color-border);border-radius:var(--radius);margin-bottom:var(--space-8);max-width:400px">
+  <div style="font-size:.75rem;color:var(--color-muted);margin-bottom:var(--space-2)">↑ 2px cobalt hairline</div>
+  <div style="height:2px;background:var(--color-cobalt);margin-bottom:1px"></div>
+  <div style="font-size:.75rem;color:var(--color-muted);margin:0 0 var(--space-2)">↑ 1px gap (background)</div>
+  <div style="height:2px;background:var(--color-cobalt)"></div>
+  <div style="height:32px;background:var(--color-cobalt);display:flex;align-items:center;padding:0 var(--space-4)">
+    <span style="font-size:.75rem;color:rgba(255,255,255,.65)">cobalt block</span>
+  </div>
+</div>
+
+<div style="height:var(--space-12)"></div>
+
+{# ============================================================
+   Design flourish options — for review
+   ============================================================ #}
+<div class="prose">
+  <h2>Flourish options — pick your poison</h2>
+  <p class="muted">Four candidate details. None are live yet — just rendered here for comparison.</p>
+</div>
+
+{# Option 1: Section overlines on h2 #}
+<section class="home-section">
+  <div class="prose">
+    <h3>Option 1 — Cobalt overline on section headings</h3>
+    <p class="muted">A 2px cobalt rule above each h2, flush-left. Architectural, systematic.</p>
+  </div>
+  <div class="prose" style="padding-top:0">
+    <h2>About CoCitizen</h2>
+    <p>We're a small group of experienced civic technologists — practitioners who've worked alongside civil society and democracy organizations for years.</p>
+    <h2>How we work</h2>
+    <p>Both tools are open source under the GNU General Public License v3. Fork them, deploy them, adapt them for your context.</p>
+  </div>
+</section>
+
+{# Option 2: Stats band #}
+<section class="home-section">
+  <div class="prose">
+    <h3>Option 2 — Stats band</h3>
+    <p class="muted">Full-width cobalt strip with three data points. Gives the hero a landing pad.</p>
+  </div>
+</section>
+
+<div class="sg-stats-band full-bleed surface-dark">
+  <div class="container">
+    <div class="sg-stats">
+      <div class="sg-stat">
+        <span class="sg-stat__value">2</span>
+        <span class="sg-stat__label">open-source tools</span>
+      </div>
+      <div class="sg-stat">
+        <span class="sg-stat__value">40+</span>
+        <span class="sg-stat__label">countries in active use</span>
+      </div>
+      <div class="sg-stat">
+        <span class="sg-stat__value">100%</span>
+        <span class="sg-stat__label">volunteer-run</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="height:var(--space-8)"></div>
+
+{# Option 3: Co · 27 periodic table badge #}
+<section class="home-section">
+  <div class="prose">
+    <h3>Option 3 — "Co · 27" periodic table badge</h3>
+    <p class="muted">Easter egg for the cobalt-kobold story. Could live in the footer or near the wordmark.</p>
+  </div>
+  <div style="display:flex;gap:var(--space-8);flex-wrap:wrap;align-items:flex-start;margin-bottom:var(--space-8)">
+    <div>
+      <p class="small muted" style="margin-bottom:var(--space-3)">On light background</p>
+      <div class="sg-element-tile">
+        <span class="sg-element-tile__number">27</span>
+        <span class="sg-element-tile__symbol">Co</span>
+        <span class="sg-element-tile__name">Cobalt</span>
+      </div>
+    </div>
+    <div class="surface-dark" style="padding:var(--space-6);border-radius:var(--radius)">
+      <p class="small" style="margin-bottom:var(--space-3);color:rgba(255,255,255,.65)">On dark background</p>
+      <div class="sg-element-tile sg-element-tile--on-dark">
+        <span class="sg-element-tile__number">27</span>
+        <span class="sg-element-tile__symbol">Co</span>
+        <span class="sg-element-tile__name">Cobalt</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Option 4: Cobalt left border on prose h2 #}
+<section class="home-section">
+  <div class="prose">
+    <h3>Option 4 — Cobalt left accent on prose h2</h3>
+    <p class="muted">Mirrors the amber <code>.highlight</code> treatment but for headings. Pairs the two colors without competing.</p>
+  </div>
+  <div class="prose" style="padding-top:0">
+    <h2 class="sg-heading-accent">About CoCitizen</h2>
+    <p>We're a small group of experienced civic technologists — practitioners who've worked alongside civil society and democracy organizations for years.</p>
+    <h2 class="sg-heading-accent">How we work</h2>
+    <p>Both tools are open source under the GNU General Public License v3. Fork them, deploy them, adapt them for your context.</p>
+  </div>
+</section>
+
+<div style="height:var(--space-12)"></div>

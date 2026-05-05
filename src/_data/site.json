@@ -1,0 +1,19 @@
+{
+  "name": "CoCitizen",
+  "tagline": "A volunteer home for practical civic technology.",
+  "domain": "cocitizen.com",
+  "email": "contact@cocitizen.com",
+  "url": "https://cocitizen.com",
+  "description": "CoCitizen gives a public home to civic-tech tools that help democratic organizations train, monitor, coordinate, and respond.",
+  "github": "https://github.com/cocitizen",
+  "tokens": {
+    "colorTheme": "#0047AB",
+    "colorAccentWarm": "#C47E3C"
+  },
+  "nav": [
+    { "label": "CyberSim", "url": "/cybersim/", "match": "/cybersim" },
+    { "label": "Apollo",   "url": "/apollo/",   "match": "/apollo"   },
+    { "label": "About",    "url": "/#about"                           },
+    { "label": "GitHub",   "url": "https://github.com/cocitizen", "external": true }
+  ]
+}
