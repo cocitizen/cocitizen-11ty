@@ -4,10 +4,19 @@ isProject: true
 ---
 <section class="page-head full-bleed surface-dark" aria-labelledby="project-title">
   <div class="container">
-    <h1 id="project-title">{{ title }}</h1>
-    {% if kicker %}
-      <p class="kicker">{{ kicker }}</p>
-    {% endif %}
+    <div class="page-head__lockup">
+      {% if logo %}
+        <div class="page-head__logo-box">
+          <img src="{{ logo }}" alt="{{ title }} logo" class="page-head__logo">
+        </div>
+      {% endif %}
+      <div>
+        <h1 id="project-title">{{ title }}</h1>
+        {% if kicker %}
+          <p class="kicker">{{ kicker }}</p>
+        {% endif %}
+      </div>
+    </div>
   </div>
 </section>
 

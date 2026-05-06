@@ -351,11 +351,44 @@ p:last-child { margin-bottom: 0; }
 
 .card p { color: var(--color-muted); font-size: 0.95rem; }
 
+.card__lockup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.card__logo {
+  height: 56px;
+  width: auto;
+  flex-shrink: 0;
+}
+
 .card__arrow {
   margin-top: auto;
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-accent);
+}
+
+.page-head__lockup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.page-head__logo-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-4);
+  flex-shrink: 0;
+}
+
+.page-head__logo {
+  height: 56px;
+  width: auto;
 }
 
 /* Footer */
