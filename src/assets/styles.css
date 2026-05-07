@@ -385,10 +385,12 @@ p:last-child { margin-bottom: 0; }
   position: absolute;
   bottom: 100%;
   right: max(var(--layout-pad), calc(50vw - var(--layout-page-max) / 2));
-  height: 360px;
+  height: 180px;
   width: auto;
   pointer-events: none;
 }
+
+.page-404 .footer-kobold { height: 360px; }
 
 
 /* ============================================================
@@ -540,7 +542,13 @@ p:last-child { margin-bottom: 0; }
 
   .nav { gap: var(--space-4); }
 
-  .footer-kobold { display: none; }
+  .footer-kobold { height: 80px; }
+  .page-404 .footer-kobold { height: 140px; }
+}
+
+@media (max-width: 900px) {
+  .footer-kobold { height: 120px; }
+  .page-404 .footer-kobold { height: 220px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
