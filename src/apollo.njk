@@ -1,7 +1,7 @@
 ---
 layout: layouts/project.njk
 title: Apollo
-kicker: Election observation data management, built for scale.
+kicker: Real-time data management for observer networks — from a handful of monitors to tens of thousands.
 description: Apollo is an election data management system for aggregating and analyzing reports from large observer teams. CoCitizen maintains a fork focused on public deployability.
 projectGithub: https://github.com/cocitizen/apollo
 logo: /assets/apollo-logo.svg
@@ -9,25 +9,29 @@ logo: /assets/apollo-logo.svg
 
 <h2>What it is</h2>
 <p>
-  Apollo is an election data management system designed for large-scale observation missions.
-  It aggregates incoming reports from field observers, supports data verification, and enables
-  real-time analysis across teams ranging from a few dozen people to tens of thousands.
+  Apollo is an election data management system for large-scale observation missions.
+  It collects incoming reports from field observers, supports verification, and makes
+  the data usable in real time — across teams that might have a few dozen people or tens of thousands.
 </p>
 <p>
-  The problem it solves — collecting, verifying, and acting on data from a large distributed
-  observer network — is technically hard. Apollo was built specifically for that challenge
-  and has been deployed in production across multiple international election observation contexts.
+  The problem is genuinely hard. Coordinating a large distributed observer network,
+  ensuring reports are reaching you, identifying anomalies, acting on what you're
+  seeing as it happens — it requires purpose-built software. Apollo was built
+  specifically for that challenge and has been deployed in production across multiple
+  international election contexts. Apollo has been in the background quietly managing 
+  data for elections where the stakes were very real — with the future of democracy 
+  or the threat of political violence on the line.
 </p>
 
 <h2>Deployment and use</h2>
 <p>
-  Apollo is in active use (as of 2025). CoCitizen manages a running instance and is working
-  with partners on upcoming deployments.
+  Apollo is in active use as of 2026. CoCitizen manages a running instance and is
+  working with partners on upcoming deployments.
 </p>
 <p>
-  Organizations at the scale where Apollo is useful — those deploying dozens to thousands
-  of observers — will typically need some onboarding and configuration support. We're happy
-  to discuss what that involves.
+  If your organization operates at the scale where Apollo makes sense — dozens to thousands of observers — you'll likely need some onboarding and configuration support
+  to get started. That's not a sales pitch; it's just the reality of the software.
+  We're happy to talk through what's involved.
 </p>
 
 <h2>Origin and credit</h2>
@@ -42,18 +46,19 @@ logo: /assets/apollo-logo.svg
 </p>
 <p>
   CoCitizen team members have been involved with Apollo from early in its development.
-  CoCitizen manages an independent fork.
+  CoCitizen manages an independent fork focused on public deployability.
 </p>
 
 <h2>CoCitizen's role</h2>
 <p>
-  Our focus has been deployability. We created approximately 1,600 Terraform scripts that
-  automate a deployment process that was previously highly manual — making it practical for
-  organizations outside NDI to run their own instances.
+  Our focus has been making Apollo practical to deploy outside of NDI. We created
+  approximately 1,600 lines of Terraform scripts that automate what was previously a highly
+  manual deployment process so more organizations can run their own instances without a dedicated infrastructure team.
 </p>
 <p>
-  CoCitizen does not control the upstream NDI repository or Apollo's election observation
-  methodology. NDI's team is responsible for the subject-matter expertise built into the system.
+  CoCitizen does not control the upstream NDI repository or Apollo's election
+  observation methodology. Much of the election-observation subject-matter expertise 
+  built into Apollo comes from NDI and the statisticians and electoral experts who shaped the system over time.
 </p>
 
 <h2>License</h2>
@@ -69,12 +74,13 @@ logo: /assets/apollo-logo.svg
 
 <h2>Get involved</h2>
 <p>
-  Contributions welcome, particularly on deployment, documentation, and testing.
+  Contributions are welcome, particularly on deployment, documentation, and testing.
   Open an issue on
   <a href="https://github.com/cocitizen/apollo/issues" target="_blank" rel="noopener">GitHub</a>
   or write to <a href="mailto:contact@cocitizen.com">contact@cocitizen.com</a>.
 </p>
 <p>
-  If your organization is considering Apollo for an observation mission, reach out —
+  If your organization is considering Apollo for a serious observation mission and the software feels daunting, feel free to reach out.
+  We may be able to advise, or if you need more in-depth help,
   individual contributors may be available for paid deployment support.
 </p>

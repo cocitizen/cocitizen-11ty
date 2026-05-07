@@ -44,8 +44,6 @@
   --color-focus: rgba(0,71,171,.28);
 
   --radius: 8px;
-  --shadow-sm: 0 1px 4px rgba(0,0,0,.05), 0 2px 8px rgba(0,0,0,.04);
-
   --motion: 140ms ease;
 }
 
@@ -131,7 +129,7 @@ h1, h2, h3 {
 
 h1 { font-size: clamp(1.9rem, 3.5vw, 2.5rem); font-weight: 700; }
 h2 { font-size: clamp(1.3rem, 2.2vw, 1.65rem); font-weight: 600; }
-h3 { font-size: 1.05rem; font-weight: 600; }
+h3 { font-size: 1.15rem; font-weight: 600; }
 
 p { margin: 0 0 var(--space-4); }
 p:last-child { margin-bottom: 0; }
@@ -187,6 +185,10 @@ p:last-child { margin-bottom: 0; }
 .surface-dark {
   background: var(--color-cobalt);
   color: var(--color-on-dark);
+  /* Hairline treatment: 2px cobalt stripe + 1px bg gap above the block */
+  box-shadow:
+    0 -1px 0 0 var(--color-bg),
+    0 -3px 0 0 var(--color-cobalt);
 }
 
 .surface-dark a {
@@ -292,14 +294,6 @@ p:last-child { margin-bottom: 0; }
   color: #fff;
 }
 
-/* Hairline treatment: 2px cobalt stripe, 1px bg gap, then the cobalt block.
-   Achieved with layered box-shadows — no extra markup needed. */
-.surface-dark {
-  box-shadow:
-    0 -1px 0 0 var(--color-bg),
-    0 -3px 0 0 var(--color-cobalt);
-}
-
 /* Button on dark/cobalt surfaces — cobalt with white outline */
 .surface-dark .btn {
   background: var(--color-cobalt);
@@ -370,27 +364,6 @@ p:last-child { margin-bottom: 0; }
   color: var(--color-accent);
 }
 
-.page-head__lockup {
-  display: flex;
-  align-items: center;
-  gap: var(--space-6);
-}
-
-.page-head__logo-box {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  border-radius: var(--radius);
-  padding: var(--space-3) var(--space-4);
-  flex-shrink: 0;
-}
-
-.page-head__logo {
-  height: 56px;
-  width: auto;
-}
-
 /* Footer */
 .site-footer {
   margin-top: var(--space-16);
@@ -414,7 +387,6 @@ p:last-child { margin-bottom: 0; }
 /* Home intro — light, typographic, no dark surface */
 .home-intro {
   padding: var(--space-20) 0 var(--space-16);
-  border-bottom: 1px solid var(--color-rule);
 }
 
 /* Wordmark — the visual identity of the site */
@@ -482,9 +454,11 @@ p:last-child { margin-bottom: 0; }
   padding-top: var(--space-4);
 }
 
-/* Project page-head */
+/* Project page-head — full-bleed without nested container to avoid centering drift */
 .page-head {
-  padding: var(--space-12) 0;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: var(--space-12) max(var(--layout-pad), calc(50vw - 50%));
   border-bottom: 3px solid var(--color-accent);
 }
 
@@ -499,6 +473,29 @@ p:last-child { margin-bottom: 0; }
   margin: 0;
   font-weight: 400;
   line-height: 1.4;
+}
+
+.page-head__lockup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  max-width: var(--layout-page-max);
+  margin: 0 auto;
+}
+
+.page-head__logo-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-4);
+  flex-shrink: 0;
+}
+
+.page-head__logo {
+  height: 56px;
+  width: auto;
 }
 
 
@@ -517,93 +514,6 @@ p:last-child { margin-bottom: 0; }
   border-radius: var(--radius);
   font-size: 0.78rem;
   line-height: 1.5;
-}
-
-/* Option 1: cobalt overline on h2 */
-.sg-overline {
-  border-top: 2px solid var(--color-cobalt);
-  padding-top: var(--space-4);
-  margin-top: var(--space-8);
-}
-.sg-overline:first-child { margin-top: 0; }
-
-/* Option 2: stats band */
-.sg-stats-band { padding: var(--space-8) 0; }
-
-.sg-stats {
-  display: flex;
-  gap: var(--space-12);
-  flex-wrap: wrap;
-}
-
-.sg-stat {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.sg-stat__value {
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  font-weight: 700;
-  color: var(--color-accent);
-  line-height: 1;
-}
-
-.sg-stat__label {
-  font-size: 0.8rem;
-  color: var(--color-on-dark-muted);
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  font-weight: 500;
-}
-
-/* Option 3: periodic table tile */
-.sg-element-tile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 72px;
-  height: 80px;
-  border: 2px solid var(--color-cobalt);
-  border-radius: 4px;
-  padding: var(--space-2);
-  gap: 1px;
-}
-
-.sg-element-tile__number {
-  font-size: 0.65rem;
-  font-weight: 600;
-  color: var(--color-cobalt);
-  align-self: flex-start;
-  line-height: 1;
-}
-
-.sg-element-tile__symbol {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--color-cobalt);
-  line-height: 1;
-}
-
-.sg-element-tile__name {
-  font-size: 0.6rem;
-  font-weight: 500;
-  color: var(--color-muted);
-  text-transform: uppercase;
-  letter-spacing: .04em;
-}
-
-.sg-element-tile--on-dark { border-color: var(--color-accent); }
-.sg-element-tile--on-dark .sg-element-tile__number { color: var(--color-accent); }
-.sg-element-tile--on-dark .sg-element-tile__symbol { color: var(--color-on-dark); }
-.sg-element-tile--on-dark .sg-element-tile__name   { color: var(--color-on-dark-muted); }
-
-/* Option 4: cobalt left accent on prose h2 */
-.sg-heading-accent {
-  border-left: 3px solid var(--color-cobalt);
-  padding-left: 1.25rem;
-  margin-left: 0;
 }
 
 

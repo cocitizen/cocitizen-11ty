@@ -1,34 +1,64 @@
 ---
 layout: layouts/project.njk
 title: CyberSim
-kicker: Cybersecurity training, built for real organizational use.
-description: CyberSim is a web-based cybersecurity tabletop exercise tool used by civic organizations, parliaments, and election monitors. CoCitizen is the current steward of the public project.
+kicker: A tabletop exercise where cybersecurity is what happens while you’re making other plans.
+description: CyberSim is a web-based facilitator app for cybersecurity tabletop exercises where civic teams practice what happens when digital threats interrupt the mission. CoCitizen stewards the public open-source project.
 projectGithub: https://github.com/cocitizen/cybersim-UI
 logo: /assets/cybersim-turtle.svg
 ---
 
 <h2>What it is</h2>
 <p>
-  CyberSim is a web application that runs interactive cybersecurity tabletop exercises.
-  Participants work through realistic threat scenarios in real time — responding to
-  simulated attacks, making decisions under pressure, and developing practical
-  awareness of how digital risks unfold in their type of organization.
+  CyberSim is a web-based facilitation app for fast-paced, interactive cybersecurity
+  tabletop exercises. In each scenario, players work toward a familiar real-world goal — winning a close campaign,
+  promoting policy change, monitoring an election — while cybersecurity threats keep getting in the way.
+  The app is digital, but the exercise is best played in person, with CyberSim helping the facilitator run the game.
 </p>
 <p>
-  It was designed for the groups that face real consequences: political parties,
-  parliaments, election monitoring teams, and civil society organizations operating
-  in environments where digital security matters.
+  The novelty of CyberSim is that, just like in life, most folks aren't focused on cybersecurity.
+  They're trying to go about their business, but if they don't plan for and respond to the 
+  digital dangers out there, they may hit some surprising setbacks that prevent them from reaching their goals. 
+  The game teaches by making the consequences feel real, in a fictional environment where it's safe to lose.
+</p>
+<p>
+  The core insight: most cybersecurity training describes threats. CyberSim makes you
+  experience the tradeoffs – time pressure, never enough money, competing priorities – in a scenario
+  that mirrors how different types of organizations actually work. Four scenarios are currently available:
+</p>
+<h3>Political party / election campaign (the O.G. scenario)</h3>
+<p>
+  Players take on a range of roles in a political party fighting an uphill election campaign — managing
+  rallies, advertising, fundraising, and voter communication. Cybersecurity incidents keep
+  interrupting. A volunteer rage-quits; if you don't rotate his credentials in time,
+  you've got a data breach. Skip two-factor authentication for your candidate to save
+  money; eventually, there's a password compromise.
+</p>
+<h3>Civil society organization and nonprofits</h3>
+<p>
+  Scenario description coming soon.
+</p>
+<h3>Parliaments and legislatures</h3>
+<p>
+  Scenario description coming soon.
+</p>
+<h3>Election observer teams</h3>
+<p>
+  Scenario description coming soon.
+</p>
+<p>
+  The scenario library is extensible, and adding to it is one of the most valuable
+  contributions anyone can make (see below).
 </p>
 
 <h2>Deployment and use</h2>
 <p>
-  CyberSim is in active use (as of 2025). Current deployments include the
-  National Civic League/Aspen Institute and Freedom House. It has been used
-  across a range of international contexts.
+  CyberSim is in active use as of 2026. Current partners include the National Civic League,
+  the Aspen Institute, and Freedom House. It has been used across a range of domestic and
+  international contexts. Specific examples coming soon.
 </p>
 <p>
   The primary project home is <a href="https://cybersim.app">cybersim.app</a> (coming soon).
-  This page covers CoCitizen's stewardship of the public version.
+  This page provides some background and covers CoCitizen's stewardship of the open-source version.
 </p>
 
 <h2>Origin and credit</h2>
@@ -39,21 +69,19 @@ logo: /assets/cybersim-turtle.svg
   <a href="https://www.ndi.org" target="_blank" rel="noopener">National Democratic Institute (NDI)</a>,
   with funding from Microsoft, the
   <a href="https://www.ned.org" target="_blank" rel="noopener">National Endowment for Democracy</a>,
-  and the National Civic League. Two members of the CoCitizen team were part of the original project.
+  and the National Civic League. Two members of the CoCitizen team were part of the
+  original project.
 </p>
 
 <h2>CoCitizen's role</h2>
 <p>
-  CoCitizen is the steward of the public CyberSim project. The original upstream is no
-  longer actively maintained. We have:
+  The original public upstream project is no longer actively maintained. CoCitizen stepped in as
+  steward of the public version — taking on current deployments, adding functionality to
+  run multiple simultaneous scenarios from a single instance, and rebuilding the deployment
+  documentation so that self-hosted instances are actually practical.
 </p>
-<ul>
-  <li>Taken on management of current deployments</li>
-  <li>Made significant core improvements enabling multi-game deployments</li>
-  <li>Rebuilt deployment documentation to make self-hosted instances practical</li>
-</ul>
 <p>
-  RisingStack is currently under separate contract making further improvements to the codebase.
+  RisingStack, the original development firm, continues to contribute improvements under a separate contract.
 </p>
 
 <h2>License</h2>
@@ -70,8 +98,24 @@ logo: /assets/cybersim-turtle.svg
 
 <h2>Get involved</h2>
 <p>
-  We welcome contributions: code, documentation, issue reports, deployment feedback.
-  Open an issue on
+  The most valuable contribution anyone can make is a new scenario. Scenarios are built
+  in Airtable — no coding required, but you do need to think carefully about how threats
+  and consequences chain together. 
+  If you're part of a community or organization type that isn't represented by our current scenarios,
+  and you'd like to help us build one to serve that community, get in touch and we'll walk you through it.
+</p>
+<p>
+  If you have thoughts for how to improve any of the existing scenarios – new threats, fun plot twists, gaps you've noticed –
+  let us know and we'll work to incorporate your ideas.
+</p>
+<p>
+  Code, documentation, issue reports, and deployment feedback are also welcome. Open an
+  issue on
   <a href="https://github.com/cocitizen/cybersim-UI/issues" target="_blank" rel="noopener">GitHub</a>
   or write to <a href="mailto:contact@cocitizen.com">contact@cocitizen.com</a>.
+</p>
+<p>
+  If you're looking to run CyberSim for your organization and have questions, feel free to reach out.
+  If you need more in-depth assistance, individual
+  contributors may be available for training, facilitation, or deployment support.
 </p>
