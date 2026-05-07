@@ -415,7 +415,7 @@ p:last-child { margin-bottom: 0; }
 
 /* Home intro — light, typographic, no dark surface */
 .home-intro {
-  padding: var(--space-20) 0 var(--space-16);
+  padding: var(--space-12) 0 var(--space-8);
 }
 
 /* Wordmark — the visual identity of the site */
@@ -449,13 +449,17 @@ p:last-child { margin-bottom: 0; }
   gap: var(--space-4);
 }
 
-.home-intro .intro-cta {
-  margin-top: var(--space-2);
-}
-
 /* Stats band — full-width cobalt strip with key numbers */
 .stats-band {
   padding: var(--space-8) 0;
+}
+
+.stats-band .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+  flex-wrap: wrap;
 }
 
 .stats {
@@ -571,7 +575,7 @@ p:last-child { margin-bottom: 0; }
 
   .card-grid { grid-template-columns: 1fr; }
 
-  .home-intro { padding: var(--space-12) 0 var(--space-8); }
+  .home-intro { padding: var(--space-8) 0 var(--space-4); }
 
   .nav { gap: var(--space-4); }
 
