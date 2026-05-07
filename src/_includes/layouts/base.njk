@@ -21,14 +21,15 @@
   <meta property="og:description" content="{{ pageDescription }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:image" content="{{ site.url }}/assets/cocitizen-logo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap">
 
   <link rel="stylesheet" href="/assets/styles.css">
-  <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/favicon/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
 
   {% if noindex %}
     <meta name="robots" content="noindex,nofollow">
@@ -41,7 +42,7 @@
   <header class="site-header">
     <div class="container">
       <a class="brand" href="/" aria-label="CoCitizen home">
-        <span class="brand__co" aria-hidden="true">Co</span><span class="brand__citizen" aria-hidden="true">Citizen</span>
+        <img src="/assets/cocitizen-logo.png" alt="CoCitizen" class="brand__logo">
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
@@ -70,14 +71,17 @@
       <img src="/assets/kobold-{{ kobold }}.png" alt="" class="footer-kobold" aria-hidden="true">
     {% endif %}
     <div class="container">
-      <p>
-        &copy; {{ page.date | year }} {{ site.name }}
-        &nbsp;&middot;&nbsp;
-        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-      </p>
-      <p class="small">
-        Volunteer-run &middot; Open source &middot; <a href="/privacy/">Privacy</a>
-      </p>
+      <img src="/assets/cocitizen-logo.png" alt="CoCitizen" class="footer-logo">
+      <div>
+        <p>
+          &copy; {{ page.date | year }} {{ site.name }}
+          &nbsp;&middot;&nbsp;
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </p>
+        <p class="small">
+          Volunteer-run &middot; Open source &middot; <a href="/privacy/">Privacy</a>
+        </p>
+      </div>
     </div>
   </footer>
 </body>

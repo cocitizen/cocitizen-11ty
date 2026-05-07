@@ -11,9 +11,9 @@
     "colorAccentWarm": "#C47E3C"
   },
   "nav": [
+    { "label": "About",    "url": "/#about"                           },
     { "label": "CyberSim", "url": "/cybersim/", "match": "/cybersim" },
     { "label": "Apollo",   "url": "/apollo/",   "match": "/apollo"   },
-    { "label": "About",    "url": "/#about"                           },
     { "label": "GitHub",   "url": "https://github.com/cocitizen", "external": true }
   ]
 }

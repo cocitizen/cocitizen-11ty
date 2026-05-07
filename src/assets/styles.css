@@ -147,13 +147,12 @@ p:last-child { margin-bottom: 0; }
 .highlight {
   border-left: 3px solid var(--color-accent);
   padding-left: 1.25rem;
-  margin-left: 0;
 }
 
 /* Prose — long-form text sections */
 .prose {
   max-width: var(--layout-prose-max);
-  padding: var(--space-8) 0;
+  padding: var(--space-4) 0;
 }
 
 .prose h2 {
@@ -222,13 +221,16 @@ p:last-child { margin-bottom: 0; }
 }
 
 .brand {
-  font-size: 0.95rem;
-  font-weight: 700;
   text-decoration: none;
-  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
 }
 
-.brand:hover { text-decoration: none; }
+.brand__logo {
+  height: 36px;
+  width: auto;
+}
+
 .brand__co      { color: var(--color-accent); }
 .brand__citizen { color: var(--color-cobalt); }
 
@@ -377,6 +379,20 @@ p:last-child { margin-bottom: 0; }
 
 .site-footer .container {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.footer-logo {
+  height: 58px;
+  width: auto;
+  flex-shrink: 0;
+  opacity: .85;
+}
+
+.site-footer .container > div {
+  display: flex;
   flex-direction: column;
   gap: var(--space-2);
 }
@@ -414,8 +430,20 @@ p:last-child { margin-bottom: 0; }
 .wordmark__co   { color: var(--color-accent); }
 .wordmark__citizen { color: var(--color-cobalt); }
 
+.home-intro__lockup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.home-intro__logo {
+  height: clamp(60px, 8vw, 96px);
+  width: auto;
+  flex-shrink: 0;
+}
+
 .home-intro .intro-body {
-  max-width: 58ch;
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
@@ -533,6 +561,11 @@ p:last-child { margin-bottom: 0; }
 /* ============================================================
    9) Media queries
    ============================================================ */
+@media (max-width: 900px) {
+  .footer-kobold { height: 120px; }
+  .page-404 .footer-kobold { height: 220px; }
+}
+
 @media (max-width: 640px) {
   :root { --layout-pad: 1.25rem; }
 
@@ -544,11 +577,6 @@ p:last-child { margin-bottom: 0; }
 
   .footer-kobold { height: 80px; }
   .page-404 .footer-kobold { height: 140px; }
-}
-
-@media (max-width: 900px) {
-  .footer-kobold { height: 120px; }
-  .page-404 .footer-kobold { height: 220px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
