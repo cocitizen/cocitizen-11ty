@@ -66,6 +66,9 @@
   </main>
 
   <footer class="site-footer surface-dark">
+    {% if kobold %}
+      <img src="/assets/kobold-{{ kobold }}.png" alt="" class="footer-kobold" aria-hidden="true">
+    {% endif %}
     <div class="container">
       <p>
         &copy; {{ page.date | year }} {{ site.name }}
